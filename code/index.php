@@ -27,9 +27,9 @@ echo $floatVariable. "<br>";
 
 echo (20 - 8). "<br>";
 
-$last_month = 1187.23;
-$this_month = 1089.98;
-echo $last_month - $this_month. "<br>";
+$lastMonth = 1187.23;
+$thisMonth = 1089.98;
+echo $lastMonth - $thisMonth. "<br>";
 
 // 11
 echo "<br>".'#11'."<br>";
@@ -63,26 +63,23 @@ $a = 10;
 $b = 3;
 echo $a % $b . "<br>";
 
-if ($a % $b == 0) {
+if (0 == $a % $b) {
     echo "Делится на $b: " . ($a / $b) . "<br>";
 } else {
     echo "Делится с остатком: " . ($a % $b) . "<br>";
-
 }
 
-$st = pow(2, 10);
+$st = 2**10;
 echo "2 в 10 степени: $st<br>";
 
-$sqrt_245 = sqrt(245);
-echo "Квадратный корень из 245: $sqrt_245<br>";
+$sqrt = sqrt(245);
+echo "Квадратный корень из 245: $sqrt<br>";
 
 $numbers = [4, 2, 5, 19, 13, 0, 10];
-$sum_squares = 0;
+$sumSquares = 0;
 foreach ($numbers as $number)
-{
-    $sum_squares += $number ** 2;
-}
-echo "Корень из суммы квадратов: " . sqrt($sum_squares) . "<br>";
+    $sumSquares += $number ** 2;
+echo "Корень из суммы квадратов: " . sqrt($sumSquares) . "<br>";
 
 echo round(sqrt(379)) . "<br>";
 echo round(sqrt(379), 1) . "<br>";
@@ -96,12 +93,11 @@ echo "Максимальное число: " . max($numbers) . "<br>";
 
 echo "Случайное число от 1 до 100: " . rand(1, 100) . "<br>";
 
-$random_numbers = [];
-for ($i = 0; $i < 10; $i++)
-{
-    $random_numbers[] = rand();
+$randomNumbers = [];
+for ($i = 0; 10 > $i; $i++) {
+    $randomNumbers[] = rand();
 }
-var_dump($random_numbers);
+var_dump($randomNumbers);
 
 echo "<br>";
 
@@ -113,8 +109,7 @@ echo "Модуль разности $a и $b: " . abs($a - $b) . "<br>";
 echo "Модуль разности $c и $d: " . abs($c - $d) . "<br>";
 
 $numbers = [1, 2, -1, -2, 3, -3];
-for ($i = 0; $i < count($numbers); $i++)
-{
+for ($i = 0; count($numbers) > $i; $i++) {
     $numbers[$i] = abs($numbers[$i]);
 }
 var_dump($numbers);
@@ -123,10 +118,8 @@ echo "<br>";
 
 $number = 30;
 $divisors = [];
-for ($i = 1; $i <= $number; $i++)
-{
-    if ($number % $i == 0)
-    {
+for ($i = 1; $i <= $number; $i++) {
+    if (0 == $number % $i) {
         $divisors[] = $i;
     }
 }
@@ -137,12 +130,10 @@ echo "<br>";
 $numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 $sum = 0;
 $count = 0;
-foreach ($numbers as $num)
-{
+foreach ($numbers as $num) {
     $sum += $num;
     $count++;
-    if ($sum > 10)
-    {
+    if (10 < $sum) {
         break;
     }
 }
@@ -186,8 +177,7 @@ echo cut("This is a long string", 5) . "<br>";
 
 function printArrayElementsRecursively($array, $index = 0)
 {
-    if ($index < count($array))
-    {
+    if ($index < count($array)) {
         echo $array[$index] . "<br>";
         printArrayElementsRecursively($array, $index + 1);
     }
@@ -200,11 +190,9 @@ echo "<br>";
 function sumDigits($number)
 {
     $sum = array_sum(str_split($number));
-    if ($sum > 9)
-    {
+    if (9 < $sum) {
         return sumDigits($sum);
-    } else
-    {
+    } else {
         return $sum;
     }
 }
@@ -214,8 +202,7 @@ echo sumDigits(803) . "<br>";
 // 17
 echo "<br>".'#17'."<br>";
 $array = [];
-for ($i = 1; $i <= 5; $i++)
-{
+for ($i = 1; 5 >= $i; $i++) {
     $array[] = str_repeat('x', $i);
 }
 var_dump($array);
@@ -233,22 +220,20 @@ echo "<br>";
 
 $arr2D = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 $sum = 0;
-foreach ($arr2D as $i)
-{
-    foreach ($i as $j)
-    {
+foreach ($arr2D as $i) {
+    foreach ($i as $j) {
         $sum += $j;
     }
 }
+
+
 echo $sum. "<br>";
 
 $counter = 1;
 $multiDimArray = [];
-for ($i = 0; $i < 3; $i++)
-{
+for ($i = 0; 3 > $i; $i++) {
     $row = [];
-    for ($j = 0; $j < 3; $j++)
-    {
+    for ($j = 0; $j < 3; $j++) {
         $row[] = $counter++;
     }
     $multiDimArray[] = $row;
@@ -281,7 +266,7 @@ echo current($arr) . "<br>";
 echo "<br>".'#18'."<br>";
 function checkSum($num1, $num2)
 {
-    return ($num1 + $num2 > 10) ? true : false;
+    return (10 < $num1 + $num2);
 }
 
 echo checkSum(5, 6) ? 'true' : 'false';
@@ -290,7 +275,7 @@ echo "<br>";
 
 function checkEquality($num1, $num2)
 {
-    return ($num1 == $num2) ? true : false;
+    return ($num1 == $num2);
 }
 
 echo checkEquality(5, 5) ? 'true' : 'false';
@@ -298,21 +283,19 @@ echo "<br>";
 
 
 $test = 0;
-echo ($test == 0) ? 'верно' : '';
+echo (0 == $test ) ? 'верно' : '';
 
 echo "<br>";
 
 $age = 54;
-if ($age < 10 || $age > 99)
-{
+if (10 > $age || 99 < $age) {
     echo "Число вне диапазона.";
 } else {
     $sum = array_sum(str_split($age));
-    if ($sum <= 9)
+    if (9 >=$sum)
     {
         echo "Сумма цифр однозначна.";
-    } else
-    {
+    } else {
         echo "Сумма цифр двузначна.";
     }
 }
@@ -320,8 +303,7 @@ if ($age < 10 || $age > 99)
 echo "<br>";
 
 $arr = [1, 2, 3];
-if (count($arr) == 3)
-{
+if (3 == count($arr)) {
     echo array_sum($arr);
 }
 
@@ -329,8 +311,7 @@ echo "<br>";
 
 // 19
 echo "<br>".'#19'."<br>";
-for ($i = 1; $i <= 20; $i++)
-{
+for ($i = 1; 20 >= $i; $i++) {
     echo str_repeat('x', $i) . "<br>";
 }
 
