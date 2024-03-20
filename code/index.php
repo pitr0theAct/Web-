@@ -268,3 +268,86 @@ echo count($arr) . "<br>";
 echo end($arr) . "<br>";
 prev($arr);
 echo current($arr) . "<br>";
+
+// 18
+function checkSum($num1, $num2)
+{
+    return ($num1 + $num2 > 10) ? true : false;
+}
+
+echo checkSum(5, 6) ? 'true' : 'false';
+echo "<br>";
+
+
+function checkEquality($num1, $num2)
+{
+    return ($num1 == $num2) ? true : false;
+}
+
+echo checkEquality(5, 5) ? 'true' : 'false';
+echo "<br>";
+
+
+$test = 0;
+echo ($test == 0) ? 'верно' : '';
+
+echo "<br>";
+
+$age = 54;
+if ($age < 10 || $age > 99)
+{
+    echo "Число вне диапазона.";
+} else {
+    $sum = array_sum(str_split($age));
+    if ($sum <= 9)
+    {
+        echo "Сумма цифр однозначна.";
+    } else
+    {
+        echo "Сумма цифр двузначна.";
+    }
+}
+
+echo "<br>";
+
+$arr = [1, 2, 3];
+if (count($arr) == 3)
+{
+    echo array_sum($arr);
+}
+
+echo "<br>";
+
+// 19
+for ($i = 1; $i <= 20; $i++)
+{
+    echo str_repeat('x', $i) . "<br>";
+}
+
+// 20
+$array = [1, 2, 3, 4, 5];
+$average = array_sum($array) / count($array);
+echo "Среднее арифметическое: $average<br>";
+
+
+$sum = (1 + 100) * 100 / 2;
+echo "Сумма чисел от 1 до 100: $sum<br>";
+
+
+$array = [9, 25, 144];
+$squareRoots = array_map('sqrt', $array);
+print_r($squareRoots);
+echo "<br>";
+
+
+$letters = range('a', 'z');
+$numbers = range(1, 26);
+$alphabetArray = array_combine($letters, $numbers);
+print_r($alphabetArray);
+echo "<br>";
+
+
+$string = '1234567890';
+$numbers = str_split($string, 2);
+$sum = array_sum($numbers);
+echo $sum . "<br>";
