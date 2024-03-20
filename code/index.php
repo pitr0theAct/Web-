@@ -2,6 +2,7 @@
 
 
 // 1
+echo "<br>".'#1'."<br>";
 /* Imagine a lot of code here */
 $very_bad_unclear_name = "15 chicken wings";
 
@@ -12,10 +13,10 @@ $order .= " with sauce";
 
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name.";
+echo "<br>";
 
 // 2
-
-echo "<br>";
+echo "<br>".'#2'."<br>";
 $intVariable = 1000;
 echo $intVariable. "<br>";
 
@@ -31,6 +32,7 @@ $this_month = 1089.98;
 echo $last_month - $this_month. "<br>";
 
 // 11
+echo "<br>".'#11'."<br>";
 $num_languages = 4;
 $months = 11;
 $days = $months * 16;
@@ -40,9 +42,11 @@ echo $days_per_language . "<br>";
 
 
 // 12
+echo "<br>".'#12'."<br>";
 echo 8 ** 2 . "<br>";
 
 // 13
+echo "<br>".'#13'."<br>";
 $my_num = 14;
 $answer = $my_num;
 $answer += 2;
@@ -54,6 +58,7 @@ echo $answer . "<br>";
 
 
 // 14
+echo "<br>".'#14'."<br>";
 $a = 10;
 $b = 3;
 echo $a % $b . "<br>";
@@ -144,6 +149,7 @@ foreach ($numbers as $num)
 echo "Количество элементов для суммы больше 10: $count<br>";
 
 // 15
+echo "<br>".'#15'."<br>";
 function printStringReturnNumber($str)
 {
     echo $str. "<br>";
@@ -154,6 +160,7 @@ $my_num = printStringReturnNumber("5");
 echo $my_num . "<br>";
 
 // 16
+echo "<br>".'#16'."<br>";
 function increaseEnthusiasm($str)
 {
     return $str . "!";
@@ -205,6 +212,7 @@ function sumDigits($number)
 echo sumDigits(803) . "<br>";
 
 // 17
+echo "<br>".'#17'."<br>";
 $array = [];
 for ($i = 1; $i <= 5; $i++)
 {
@@ -270,6 +278,7 @@ prev($arr);
 echo current($arr) . "<br>";
 
 // 18
+echo "<br>".'#18'."<br>";
 function checkSum($num1, $num2)
 {
     return ($num1 + $num2 > 10) ? true : false;
@@ -319,12 +328,15 @@ if (count($arr) == 3)
 echo "<br>";
 
 // 19
+echo "<br>".'#19'."<br>";
 for ($i = 1; $i <= 20; $i++)
 {
     echo str_repeat('x', $i) . "<br>";
 }
 
+
 // 20
+echo "<br>".'#20'."<br>";
 $array = [1, 2, 3, 4, 5];
 $average = array_sum($array) / count($array);
 echo "Среднее арифметическое: $average<br>";
