@@ -1,7 +1,7 @@
 <?php
 
 
-//1
+// 1
 /* Imagine a lot of code here */
 $very_bad_unclear_name = "15 chicken wings";
 
@@ -30,3 +30,14 @@ $last_month = 1187.23;
 $this_month = 1089.98;
 echo $last_month - $this_month. "<br>";
 
+// 11
+$num_languages = 4;
+$months = 11;
+$days = $months * 16;
+$days_per_language = $days / $num_languages;
+echo $days_per_language . "<br>";
+
+
+
+// 12
+echo 8 ** 2 . "<br>";
